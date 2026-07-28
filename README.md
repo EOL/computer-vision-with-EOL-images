@@ -1,6 +1,6 @@
 # Computer Vision with EOL v3 Images 
 Testing different computer vision methods (object detection, image classification) to do customized, large-scale image processing for [Encyclopedia of Life v3 database images](https://eol.org/pages/2913056/media) (square, centered crops; image content tags; etc). Runs in Tensorflow 2 and Python 3.  
-*Last updated 14 September 2025*
+*Last updated 28 July 2026*
 
 <p align="center">
 <a href="url"><img src="https://github.com/aubricot/computer_vision_with_eol_images/blob/master/object_detection_for_image_cropping/images/banner.jpg" align="middle" width="900" ></a></p>   
@@ -9,6 +9,11 @@ Testing different computer vision methods (object detection, image classificatio
 <sub><sup>Images a-c are hosted by Encyclopedia of Life (a. <a href="http://upload.wikimedia.org/wikipedia/commons/a/af/Choeronycteris_mexicana%2C_Mexican_long-tongued_bat_%287371567444%29.jpg"><i>Choeronycteris mexicana</i></a>, licensed under <a href="https://creativecommons.org/licenses/by/2.0/legalcode"></a>CC BY 2.0</a>, b. <a href="https://calphotos.berkeley.edu/cgi/img_query?seq_num=81811&one=T"><i>Hippotion celerio</i></a>, licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>, c. <a href="https://content.eol.org/data/media/7e/b3/54/542.16276541578.jpg"><i>Cuculus solitarius</i></a> (left) and <a <i>Cossypha caffra</i></a> (right)</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>).</sup></sub>
 
 The Encyclopedia of Life (EOL) is an online biodiversity resource that seeks to provide information about all ~1.9 million species known to science. A goal for the latest version of EOL (v3) is to better leverage the older, less structured image content. To improve discoverability and display of EOL images, automated image processing pipelines that use computer vision with the goal of being scalable to millions of diverse images are being developed and tested. 
+
+## Project update - Jul 2026
+Since the time our CV experiments were carried out, the field has grown rapidly with frameworks, like PyTorch<a href="#note13" id="note13ref"><sup>13</sup></a>, and models, like BIOCLIP<a href="#note14" id="note14ref"><sup>14</sup></a>, gaining popularity for biological tasks. To highlight how our approaches can be integrated with these new frameworks, we present three additional pipelines that utilize new models to perform image management tasks (BioClipv2, Dinov3, and YOLOv8; [play for beginners notebooks](https://github.com/EOL/computer-vision-with-EOL-images/tree/master/play_for_beginners)). 
+
+Using computer vision during the transition from EOL v2 to v3 allowed us to automate management of millions of images. Image cropping adds uniformity to gallery displays and increases functionality for API users who often request square thumbnails. Image tagging can increase the discoverability and utility of our images, enabling users to search for content beyond taxonomy (e.g., plant-insect co-occurrence). We hope that our provided training datasets, trained models, and strategies will serve as a helpful guide for building future biodiversity computer vision projects. Please see our forthcoming publication in BioScience for more information ([Wolcott et al. 2026](https://doi.org/10.1093/biosci/biag074)).
 
 ## Project Structure
 <p align="center">
@@ -126,9 +131,17 @@ For additional details on steps below, see the [project wiki](https://github.com
 <a id="note10" href="#note10ref"><sup>10</sup></a>[Bochkovskiy et al. 2020](https://arxiv.org/abs/2004.10934). YOLOv4: Optimal Speed and Accuracy of Object Detection. arXiv.   
 <a id="note11" href="#note11ref"><sup>11</sup></a>[Liu et al. 2016](https://doi.org/10.1007/978-3-319-46448-0_2). SSD: Single shot multibox detector. Lecture Notes in Computer Science.   
 <a id="note12" href="#note12ref"><sup>12</sup></a>[Krasin et al. 2017](https://github.com/openimages). Open images: A public dataset for large-scale multi-label and multi-class image classification. GitHub.   
+<a id="note13" href="#note13ref"><sup>13</sup></a>[Paszke et al. 2019](https://doi.org/10.48550/arXiv.1912.01703). PyTorch: An Imperative Style, High-Performance Deep Learning Library. arXiv.   
+<a id="note14" href="#note14ref"><sup>14</sup></a>[Stevens et al. 2024](https://doi.org/10.1109/CVPR52733.2024.01836). BioCLIP: A Vision Foundation Model for the Tree of Life. CVPR.   
 
 
 ## License
+**Project citation**   
+If you use ideas or code from this project, please cite the below publication. 
+```
+Wolcott, Hammock, Schulz, and Orrell 2026. Manage your image database with computer vision — lessons learned at Encyclopedia of Life. Forthcoming in BioScience. doi.org/10.1093/biosci/biag074
+
+```
 **Code**  
 Code in this repository is released under the [MIT license](https://github.com/aubricot/computer_vision_with_eol_images/blob/master/LICENSE). More information is available at the [Open Source Initiative](https://opensource.org/licenses/MIT).   
 **Images**  
